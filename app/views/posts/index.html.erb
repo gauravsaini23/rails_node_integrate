@@ -1,0 +1,32 @@
+<table>
+<tr>
+<td>
+  <%= form_for @post1 do |f|%>
+    <%= label_tag :value1 %>
+    <%= f.text_field :name, :id => "value_textbox_#{@post1.id}" %>
+    <%= f.submit 'Save'%>
+  <% end %>
+</td>
+<td>
+<%= form_for @post2 do |f|%>
+  <%= label_tag :value2 %>
+  <%= f.text_field :name, :id => "value_textbox_#{@post2.id}" %>
+  <%= f.submit 'Save'%>
+<% end %>
+</td>
+</tr>
+<tr>
+<td>
+Value 1 is 
+<div id="value_<%= @post1.id %>">
+  <%= @post1.name %>
+</div>
+</td>
+<td>
+Value 2 is 
+<div id="value_<%= @post2.id %>">
+  <%= @post2.name %>
+</div>
+</td>
+</tr>
+</table>
