@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.update_attributes(params[:post])
-    uri = URI.parse( "http://10.1.5.32:8001/send" )
+    uri = URI.parse( "http://sharp-frost-7793.herokuapp.com/send" )
     http = Net::HTTP.new(uri.host, uri.port)
     query = {:text => @post.name,:id=> @post.id}
     req = Net::HTTP::Get.new(uri.path)

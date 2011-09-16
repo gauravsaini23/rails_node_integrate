@@ -20,7 +20,7 @@ function longPoll (data) {
     dataType: 'jsonp',
     data: 'since=' + CONFIG.last_message_time,
     jsonpCallback: 'longPoll',
-    url: 'http://122.176.52.224:8001/recv',
+    url: 'http://sharp-frost-7793.herokuapp.com/recv',
     error: function() {
       setTimeout(longPoll, 10*2000);
     }
