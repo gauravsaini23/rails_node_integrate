@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
 
   def index
-    @post1 = Post.first
-    @post2 = Post.last
+    @post1 = Post.find(1)
+    @post2 = Post.find(2)
   end
 
   def update
